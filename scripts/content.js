@@ -32,20 +32,20 @@ const steamID3 = convertSteamID64ToSteamID3(steamID);
 const dotabuffButton = document.createElement("button");
 dotabuffButton.textContent = "Dotabuff";
 
-dotabuffButton.style.backgroundColor = "#fc4801"; // Orange background color
-dotabuffButton.style.color = "white"; // White text color
-dotabuffButton.style.border = "none"; // No border
-dotabuffButton.style.padding = "5px 10px"; // Padding
-dotabuffButton.style.position = "fixed"; // Fixed position
-dotabuffButton.style.top = "10px"; // 10 pixels from the top
-dotabuffButton.style.right = "120px"; // 10 pixels from the right
-dotabuffButton.style.cursor = "pointer"; // Cursor on hover
+dotabuffButton.style.backgroundColor = "#fc4801"; 
+dotabuffButton.style.color = "white"; 
+dotabuffButton.style.border = "none"; 
+dotabuffButton.style.padding = "5px 10px"; 
+dotabuffButton.style.position = "fixed"; 
+dotabuffButton.style.top = "10px"; 
+dotabuffButton.style.right = "120px"; 
+dotabuffButton.style.cursor = "pointer"; 
 
-dotabuffButton.style.fontFamily = "Arial, sans-serif"; // Font family
-dotabuffButton.style.fontWeight = "700"; // Font weight
-dotabuffButton.style.fontSize = "14px"; // Font size
-dotabuffButton.style.lineHeight = "14px"; // Line height
-dotabuffButton.style.textTransform = "uppercase"; // Uppercase text
+dotabuffButton.style.fontFamily = "Arial, sans-serif"; 
+dotabuffButton.style.fontWeight = "700"; 
+dotabuffButton.style.fontSize = "14px"; 
+dotabuffButton.style.lineHeight = "14px"; 
+dotabuffButton.style.textTransform = "uppercase"; 
 
 dotabuffButton.onclick = function () {
   if (steamID) {
@@ -62,20 +62,20 @@ stratzButton.textContent = "Stratz";
 
 stratzButton.style.background =
   "linear-gradient(135deg, rgba(10,21,23,1) 0%, rgba(1,145,173,1) 66%, rgba(5,96,113,1) 100%)";
-stratzButton.style.color = "white"; // White text color
-stratzButton.style.border = "none"; // No border
-stratzButton.style.padding = "5px 10px"; // Padding
-stratzButton.style.position = "fixed"; // Fixed position
-stratzButton.style.top = "10px"; // 10 pixels from the top
-stratzButton.style.right = "30px"; // Adjust as needed
-stratzButton.style.cursor = "pointer"; // Cursor on hover
+stratzButton.style.color = "white"; 
+stratzButton.style.border = "none"; 
+stratzButton.style.padding = "5px 10px"; 
+stratzButton.style.position = "fixed"; 
+stratzButton.style.top = "10px"; 
+stratzButton.style.right = "30px"; 
+stratzButton.style.cursor = "pointer"; 
 
 stratzButton.style.fontFamily =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'; // Font family
-stratzButton.style.fontWeight = "700"; // Font weight
-stratzButton.style.fontSize = "14px"; // Font size
-stratzButton.style.lineHeight = "14px"; // Line height
-stratzButton.style.textTransform = "uppercase"; // Uppercase text
+stratzButton.style.fontWeight = "700"; 
+stratzButton.style.fontSize = "14px"; 
+stratzButton.style.lineHeight = "14px"; 
+stratzButton.style.textTransform = "uppercase"; 
 
 stratzButton.onclick = function () {
   if (steamID) {
