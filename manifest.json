@@ -2,20 +2,21 @@
   "manifest_version": 3,
   "name": "DotaStats",
   "icons": {
-    "16": "images/ds.png",
-    "48": "images/ds.png",
-    "128": "images/ds.png"
+    "16": "images/stratz.png",
+    "48": "images/stratz.png",
+    "128": "images/stratz.png"
   },
-  "version": "1.0",
+  "version": "2.0",
   "homepage_url": "https://github.com/asphodelius/DotaStats",
-  "description": "Adds Dotabuff/Stratz link to Steam profiles.",
+  "description": "Adds Dota Statistics to Steam profile.",
   "permissions": ["activeTab", "storage"],
   "action": {
-    "default_icon": "images/ds.png",
+    "default_icon": "images/stratz.png",
     "default_title": "DotaStats"
   },
+  "host_permissions": ["https://api.stratz.com/*"],
   "background": {
-    "service_worker": "scripts/background.js"
+    "service_worker": "background.bundle.js"
   },
   "content_scripts": [
     {
@@ -29,6 +30,12 @@
       ],
       "css": ["style.css"],
       "js": ["scripts/content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/ranks/*.png"],
+      "matches": ["<all_urls>"]
     }
   ]
 }

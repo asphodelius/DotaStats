@@ -1,1 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+.medal-image,
+.leaderboard-medal-image {
+  width: 110px;
+  height: 110px;
+  margin-left: -150px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.dotastats_namerow {
+  padding-left: 100px !important;
+  margin-top: 20px !important;
+  cursor: pointer !important;
+}
+
+.custom-star-image {
+  width: 110px !important;
+  height: 110px !important;
+  margin-left: -230px !important;
+  margin-top: -20px !important;
+  z-index: 999 !important;
+  position: fixed !important;
+}
+
+.leaderboard-rank {
+  color: white !important;
+  z-index: 5 !important;
+  position: absolute !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  border-radius: 9px !important;
+  border-color: black !important;
+  align-items: center !important;
+
+  left: -21%;
+  top: 71%;
+  transform: translate(-50%, -50%);
+  padding-right: 6px !important;
+  padding-left: 6px !important;
+}
