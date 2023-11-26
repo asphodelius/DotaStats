@@ -37,3 +37,7 @@
   padding-right: 6px !important;
   padding-left: 6px !important;
 }
+
+.editor {
+  color: grey;
+}
