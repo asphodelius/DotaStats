@@ -55,7 +55,7 @@ function updateDotaStatsDOM(data) {
   textNode.id = "dotastats";
   textNode.innerHTML = `
     <div class="profile_customization">
-      <div class="profile_customization_header">Dota 2 Stats</div>
+      <div class="profile_customization_header">Dota 2 Stats <span class="editor">by asphodelius</span></div>
       <div class="profile_customization_block">
         <div class="favoritegroup_showcase">
           <div class="showcase_content_bg">
