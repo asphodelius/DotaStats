@@ -4,7 +4,7 @@ module.exports = {
   entry: "./scripts/background.js", // adjust this path
   output: {
     filename: "background.bundle.js",
-    path: __dirname,
+    path: "background.bundle.js",
   },
   module: {
     rules: [
