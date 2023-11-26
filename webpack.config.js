@@ -1,7 +1,7 @@
 // webpack.config.js
 
 module.exports = {
-  entry: "./scripts/background.js", // adjust this path
+  entry: "./scripts/background.js",
   output: {
     filename: "background.bundle.js",
     path: "background.bundle.js",
