@@ -60,7 +60,7 @@
 }
 
 .tooltip {
-  cursor: default;
+  cursor: help;
   position: relative;
   display: inline-block;
 }
