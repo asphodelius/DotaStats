@@ -10,7 +10,15 @@
 .dotastats_namerow {
   padding-top: 20px !important;
   padding-left: 25px !important;
-  cursor: pointer !important;
+}
+
+.showcase_content_bg {
+  padding-bottom: 0px !important;
+}
+
+.profile_customization
+  .dotastats_content.favoritegroup_showcase_group.showcase_slot {
+  margin-bottom: 0px !important;
 }
 
 .custom-star-image {
@@ -20,6 +28,7 @@
   margin-top: -20px !important;
   z-index: 999 !important;
   position: fixed !important;
+  top: 95px !important;
 }
 
 .leaderboard-rank {
@@ -32,7 +41,7 @@
   align-items: center !important;
 
   left: -21%;
-  top: 83%;
+  top: 63%;
   transform: translate(-50%, -50%);
   padding-right: 6px !important;
   padding-left: 6px !important;
@@ -46,8 +55,36 @@
   position: unset !important;
   float: right;
   margin-right: 100px;
-  margin-top: -60px;
+  margin-top: -90px;
   padding-top: 5px;
-  margin-bottom: 5px;
-  padding-bottom: 9px;
+}
+
+.tooltip {
+  cursor: default;
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  font-size: 12px;
+  visibility: hidden;
+  width: 80px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1px;
+  position: absolute;
+  z-index: 1;
+  top: 110%; /* Adjusted to appear below the element */
+  left: 50%;
+  margin-left: -40px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
