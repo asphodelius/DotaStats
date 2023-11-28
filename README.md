@@ -2,7 +2,7 @@
 
 
 
-![alt text](https://i.imgur.com/F6wc9ZZ.png)
+![alt text](https://i.imgur.com/MpYCnqM.png)
 
 DotaStats is an extension that adds Dota Statistic to a Steam profile using [Stratz API](https://stratz.com/api) and [GraphQL](https://graphql.org). Inspired by [FaceitStats](https://github.com/boomix/Faceit-stats).
 ---
