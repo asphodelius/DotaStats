@@ -69,7 +69,7 @@
   font-size: 12px;
   visibility: hidden;
   width: 80px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   border-color: black;
   color: #fff;
   text-align: center;
@@ -77,7 +77,7 @@
   padding: 1px;
   position: absolute;
   z-index: 1;
-  top: 110%; /* Adjusted to appear below the element */
+  top: 110%; 
   left: 50%;
   margin-left: -40px;
   opacity: 0;
