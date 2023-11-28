@@ -11,11 +11,14 @@ function makeGraphQLRequest(steamID3) {
       player(steamAccountId: $steamAccountId) {
         steamAccount {
           name 
-          avatar 
           isAnonymous 
           seasonRank 
           smurfFlag
           seasonLeaderboardRank
+          proSteamAccount {
+            isPro
+            name
+          }
         }
         firstMatchDate
         matchCount 
@@ -42,6 +45,7 @@ function makeGraphQLRequest(steamID3) {
 }
 
 function processAndSendMessage(data) {
+  console.log(data);
   const processedData = processGraphQLData(data);
   sendMessageToContentScript(processedData);
 }
@@ -49,8 +53,16 @@ function processAndSendMessage(data) {
 function processGraphQLData(data) {
   const playerData = data?.data?.player;
 
+  // Use proSteamAccount name if available, otherwise use playerName
+  const playerName =
+    (playerData?.steamAccount?.proSteamAccount?.isPro &&
+      playerData?.steamAccount?.proSteamAccount?.name) ||
+    playerData?.steamAccount?.name ||
+    "";
+
   const processedData = {
-    playerName: playerData?.steamAccount?.name || "",
+    playerName: playerName,
+    isPro: playerData?.steamAccount?.proSteamAccount?.isPro || false, // Added isPro field
     isAnonymous: playerData?.steamAccount?.isAnonymous || false,
     seasonRank: playerData?.steamAccount?.seasonRank || "",
     smurfFlag: playerData?.steamAccount?.smurfFlag || false,
