@@ -32,7 +32,6 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 });
 
 function updateDotaStatsDOM(data) {
-  console.log(data);
   const medalImage = data.seasonLeaderboardRank
     ? ""
     : chrome.runtime.getURL(data.medalImage);
@@ -54,6 +53,7 @@ function updateDotaStatsDOM(data) {
 
   const playerName = data.proSteamAccount?.name || data.playerName;
   const isPro = data.isPro;
+  const isAnonymous = data.isAnonymous;
 
   const proSVG = isPro
     ? `<div class="tooltip">
@@ -64,12 +64,14 @@ function updateDotaStatsDOM(data) {
     </div>`
     : "";
 
-  const anonymousSVG = `<div class="tooltip">
+  const anonymousSVG = isAnonymous
+    ? `<div class="tooltip">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 20px; width: 20px; fill: rgba(255, 255, 255, 0.36);">
                         <path d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zm.017-16.5c-11.065 0-8.94 9-3.962 9 .998 0 1.937-.485 2.536-1.31l.643-.885a.96.96 0 0 1 1.566 0l.643.886a3.136 3.136 0 0 0 2.535 1.309c4.747 0 7.266-9-3.961-9zM8.6 13.227c-1.026 0-1.694-.601-2.002-.962a.408.408 0 0 1 0-.53c.308-.361.975-.962 2.002-.962 1.027 0 1.694.601 2.002.962.13.153.13.377 0 .53-.308.361-.976.962-2.002.962zm6.8 0c-1.027 0-1.694-.601-2.002-.962a.408.408 0 0 1 0-.53c.308-.361.975-.962 2.002-.962 1.027 0 1.694.601 2.002.962.13.153.13.377 0 .53-.308.361-.976.962-2.002.962z"/>
                         
                         </svg> <span class="tooltiptext">Anonymous</span>
-                        </div>`;
+                        </div>`
+    : "";
 
   const textNode = document.createElement("div");
   textNode.id = "dotastats";
