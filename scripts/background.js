@@ -45,7 +45,6 @@ function makeGraphQLRequest(steamID3) {
 }
 
 function processAndSendMessage(data) {
-  console.log(data);
   const processedData = processGraphQLData(data);
   sendMessageToContentScript(processedData);
 }
@@ -87,10 +86,14 @@ function convertTimestampToDate(timestamp) {
   return timestamp ? new Date(timestamp * 1000) : null;
 }
 
-function getMedalImage(seasonRank) {
-  return seasonRank === 80
-    ? ""
-    : `images/ranks/medal_${Math.floor(seasonRank / 10)}.png`;
+function getMedalImage(seasonRank, seasonLeaderboardRank) {
+  let imagePath;
+  if (seasonRank === 80) {
+    imagePath = "images/ranks/medal_8.png";
+  } else {
+    imagePath = `images/ranks/medal_${Math.floor(seasonRank / 10)}.png`;
+  }
+  return imagePath;
 }
 
 function getStarImage(seasonRank) {
